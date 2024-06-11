@@ -6,5 +6,8 @@ function isRed(fruits) {
     }
 }
 
+console.log(" Normal function :" + isRed('apple'));
 
-var isRed = fruits => ['apple' , 'strawberry', 'cherries'].includes(fruits);
+var isRed = fruits => ['apple' , 'strawberry', 'cherries', 'banana'].includes(fruits);
+
+console.log(" Arrow function :" + isRed('banana'));
