@@ -18,6 +18,10 @@ const Movies: Array<Movie> = [
       {
         title: 'Scent of a Woman',
         lengthMinutes: 157
+      },
+      {
+        title: 'Civil War',
+        lengthMinutes: 176
       }
 ];
 
@@ -33,12 +37,7 @@ function compare_movie_lengths(x:Movie, y:Movie) {
 
 }
 
-console.log(compare_movie_lengths(Movies[1], Movies[0]));
-//Movies.sort(); // it will give longest from array above given Movies[1], Movies[0]
-
-// for sorting using .sort
-
-Movies.sort(compare_movie_lengths); // it will give longest from entire array
+Movies.sort(compare_movie_lengths);
 
 const longestMovie = Movies[0];
 console.log(`Longest movie is ${longestMovie.title}`);
