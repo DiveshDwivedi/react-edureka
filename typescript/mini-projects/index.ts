@@ -85,6 +85,6 @@ class EventManagement {
     }
 
     sendNotifications(eventId: number, message: string): void {
-
+        // Write code to send mail.
     }
 }
