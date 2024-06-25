@@ -17,13 +17,47 @@ const calculateTotalSales = (product_id) => {
 const sortProductsByPrice = () => {
     return products.sort((a,b) => a.price - b.price);
 }
-// Get customer purchase history
 
+/**
+ * get current stocks of products
+ */
+const get_stock_each_product = () => {
+    return products.map((product) => product.stock)
+}
+
+/**
+ * Get customer purchase history
+ */
+const getCustomerPurchaseHistory = (customer_id) => {
+    return customers.find(customer => customer.customerId === customer_id)
+}
+
+/**
+ * get customer purchased Product from history
+ * @param {*} customer_id 
+ * @returns object|undefined
+ */
+const getCustomerPurchasedProducts = (customer_id) => {
+    const { purchaseHistory } = (getCustomerPurchaseHistory(customer_id) != undefined) ? getCustomerPurchaseHistory(customer_id) : {};
+
+    if (purchaseHistory != undefined) {
+        let purchased_product_details = [];
+        for(const values of purchaseHistory) {
+            purchased_product_details.push(products.find(product => product.id === values));
+        }
+
+        return purchased_product_details;
+    }
+
+    return undefined;
+}
 
 module.exports = {
     filterProductsByCategory,
     calculateTotalSales,
     sortProductsByPrice,
-    // getCustomerPurchaseHistory,
+    get_stock_each_product,
+    getCustomerPurchaseHistory,
+    getCustomerPurchasedProducts
 };
 
