@@ -1,7 +1,7 @@
  import error_status  from '../utils/error-status.js';
 
-const api_key = "14198dd73cb76fc29f2090f1e46f7ebf";
-const api_url = "https://api.openweathermap.org/data/2.5/weather?units=metric&appid=";
+const api_key = window.env.API_KEY;
+const api_url = window.env.API_URL;
 
 const search_input = document.querySelector(".search input");
 
