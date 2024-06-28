@@ -23,3 +23,5 @@ const customers = [
 ];
 
 module.exports = { products, sales, customers };
+
+

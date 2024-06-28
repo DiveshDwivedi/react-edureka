@@ -52,12 +52,36 @@ const getCustomerPurchasedProducts = (customer_id) => {
     return undefined;
 }
 
+const get_total_revenue = () => {
+    let total_revenue = 0;
+    sales.forEach(sale => {
+        const product = products.find(product => product.id === sale.productId);
+
+        if (product) {
+            const revenue = sale.quantity * product.price;
+        
+            total_revenue += revenue; 
+        }
+    })
+
+    return total_revenue;
+}
+
+const total_Revenue = sales.reduce((total, sale) => {
+    const product = products.find(p => p.id === sale.productId);
+    if (product) {
+        return total + (sale.quantity * product.price);
+    }
+    return total;
+}, 0);
+
 module.exports = {
     filterProductsByCategory,
     calculateTotalSales,
     sortProductsByPrice,
     get_stock_each_product,
     getCustomerPurchaseHistory,
-    getCustomerPurchasedProducts
+    getCustomerPurchasedProducts,
+    get_total_revenue
 };
 

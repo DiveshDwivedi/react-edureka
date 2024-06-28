@@ -149,5 +149,4 @@ const filght_passengers = findAllPassengersOnFlight('BA205');
 
 (filght_passengers === undefined) ? console.log("Wrong Flight No.") : (filght_passengers.length > 0 ? console.log(filght_passengers.passengers) : console.log("Passenger not found"));
 
-
-console.log(findAllPassengersOnFlight('BA205').passengers);
+  
