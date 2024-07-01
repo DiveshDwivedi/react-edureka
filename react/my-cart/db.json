@@ -1,0 +1,14 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "CopyRight Automatico",
+        "tags": "[JS]"
+      },
+      {
+        "id": 2,
+        "title": "HtmlWebpackPlugin Multiples HTML files",
+        "tags": "[JS, webpack]"
+      }
+    ]
+  }
