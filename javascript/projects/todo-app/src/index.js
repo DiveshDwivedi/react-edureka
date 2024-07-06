@@ -8,5 +8,12 @@ function add_task() {
         let li = document.createElement('li')
         li.innerHTML = input_box.value;
         list_container.appendChild(li);
+
+        let span = document.createElement('span');
+        span.innerHTML = '\u00d7';
+        li.appendChild(span);
     }
+
+    // clear input field after enter value
+    input_box.value = '';
 }
