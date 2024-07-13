@@ -1,0 +1,236 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "email": "john@example.com",
+      "password": "hashed_password_1",
+      "role": "user",
+      "createdAt": "2023-01-15T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "username": "janedoe",
+      "email": "jane@example.com",
+      "password": "hashed_password_2",
+      "role": "admin",
+      "createdAt": "2023-02-20T14:45:00Z"
+    },
+    {
+      "id": 3,
+      "username": "bobsmith",
+      "email": "bob@example.com",
+      "password": "hashed_password_3",
+      "role": "user",
+      "createdAt": "2023-03-10T09:15:00Z"
+    },
+    {
+      "id": 4,
+      "username": "alicejohnson",
+      "email": "alice@example.com",
+      "password": "hashed_password_4",
+      "role": "user",
+      "createdAt": "2023-04-05T16:20:00Z"
+    },
+    {
+      "id": 5,
+      "username": "charliebrooks",
+      "email": "charlie@example.com",
+      "password": "hashed_password_5",
+      "role": "user",
+      "createdAt": "2023-05-12T11:55:00Z"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "isbn": "9780446310789",
+      "publishedDate": "1960-07-11",
+      "genre": "Fiction",
+      "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it.",
+      "price": 12.99,
+      "stock": 50,
+      "coverImage": "https://example.com/images/to-kill-a-mockingbird.jpg"
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "9780451524935",
+      "publishedDate": "1949-06-08",
+      "genre": "Science Fiction",
+      "description": "A dystopian novel set in a totalitarian society.",
+      "price": 10.99,
+      "stock": 30,
+      "coverImage": "https://example.com/images/1984.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "isbn": "9780141439518",
+      "publishedDate": "1813-01-28",
+      "genre": "Romance",
+      "description": "A classic tale of love and misunderstanding in class-conscious England.",
+      "price": 9.99,
+      "stock": 40,
+      "coverImage": "https://example.com/images/pride-and-prejudice.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn": "9780743273565",
+      "publishedDate": "1925-04-10",
+      "genre": "Fiction",
+      "description": "A portrait of the Jazz Age in all of its decadence and excess.",
+      "price": 11.99,
+      "stock": 25,
+      "coverImage": "https://example.com/images/the-great-gatsby.jpg"
+    },
+    {
+      "id": 5,
+      "title": "To the Lighthouse",
+      "author": "Virginia Woolf",
+      "isbn": "9780156907392",
+      "publishedDate": "1927-05-05",
+      "genre": "Modernist",
+      "description": "A landmark novel of high modernism, centering on the Ramsay family.",
+      "price": 13.99,
+      "stock": 20,
+      "coverImage": "https://example.com/images/to-the-lighthouse.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "isbn": "9780142437247",
+      "publishedDate": "1851-10-18",
+      "genre": "Adventure",
+      "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale.",
+      "price": 14.99,
+      "stock": 0,
+      "coverImage": "https://example.com/images/moby-dick.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "userId": 3,
+      "rating": 5,
+      "comment": "A timeless classic that everyone should read.",
+      "createdAt": "2023-06-15T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "bookId": 1,
+      "userId": 4,
+      "rating": 4,
+      "comment": "Beautifully written, but a bit slow-paced at times.",
+      "createdAt": "2023-06-16T14:45:00Z"
+    },
+    {
+      "id": 3,
+      "bookId": 2,
+      "userId": 1,
+      "rating": 5,
+      "comment": "A chilling and thought-provoking dystopian novel.",
+      "createdAt": "2023-06-17T11:20:00Z"
+    },
+    {
+      "id": 4,
+      "bookId": 3,
+      "userId": 2,
+      "rating": 4,
+      "comment": "A delightful romance with witty dialogue.",
+      "createdAt": "2023-06-18T09:10:00Z"
+    },
+    {
+      "id": 5,
+      "bookId": 4,
+      "userId": 5,
+      "rating": 3,
+      "comment": "Interesting portrayal of the Roaring Twenties, but I found the characters hard to relate to.",
+      "createdAt": "2023-06-19T16:55:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "books": [
+        {"bookId": 1, "quantity": 2},
+        {"bookId": 3, "quantity": 1}
+      ],
+      "totalAmount": 35.97,
+      "status": "completed",
+      "createdAt": "2023-06-20T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "books": [
+        {"bookId": 2, "quantity": 1},
+        {"bookId": 5, "quantity": 1}
+      ],
+      "totalAmount": 24.98,
+      "status": "processing",
+      "createdAt": "2023-06-21T15:45:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "books": [
+        {"bookId": 4, "quantity": 1}
+      ],
+      "totalAmount": 11.99,
+      "status": "shipped",
+      "createdAt": "2023-06-22T09:20:00Z"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "books": [
+        {"bookId": 1, "quantity": 1},
+        {"bookId": 2, "quantity": 1},
+        {"bookId": 3, "quantity": 1}
+      ],
+      "totalAmount": 33.97,
+      "status": "cancelled",
+      "createdAt": "2023-06-23T14:10:00Z"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 5,
+      "books": [
+        {"bookId": 1, "quantity": 1},
+        {"bookId": 4, "quantity": 2}
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "books": [
+        {"bookId": 2, "quantity": 1},
+        {"bookId": 5, "quantity": 1}
+      ]
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 1,
+      "userId": 1,
+      "bookIds": [2, 5]
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "bookIds": [1, 3, 4]
+    }
+  ]
+}
