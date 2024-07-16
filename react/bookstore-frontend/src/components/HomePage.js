@@ -22,9 +22,9 @@ const HomePage = () => {
       <header>
         <h1>Home Page of Bookstore</h1>
       </header>
-      <body>
+      <div>
       <BooksList books={books}></BooksList>
-      </body>
+      </div>
       </>
       
     );
