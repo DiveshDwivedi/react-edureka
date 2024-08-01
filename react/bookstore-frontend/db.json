@@ -53,18 +53,6 @@
       "price": 13.99,
       "stock": 20,
       "coverImage": "https://example.com/images/to-the-lighthouse.jpg"
-    },
-    {
-      "id": "6",
-      "title": "Moby-Dick",
-      "author": "Herman Melville",
-      "isbn": "9780142437247",
-      "publishedDate": "1851-10-18",
-      "genre": "Adventure",
-      "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale.",
-      "price": 14.99,
-      "stock": 0,
-      "coverImage": "https://example.com/images/moby-dick.jpg"
     }
   ],
   "reviews": [

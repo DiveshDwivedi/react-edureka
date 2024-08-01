@@ -26,16 +26,22 @@ const BookModal = () => {
 
 
   return (
-    // <div className="modal fade" id={`book-modal-${book.id}`}>
-    <div id={`book-modal-${book.id}`}>
-      <h5 className="modal-title">{book.title}</h5>
-      <p>ID: {book.id}</p>
-      <p>Title: {book.title}</p>
-      <p>Author: {book.author}</p>
-      <p>ISBN: {book.isbn}</p>
-      <p>PublishedDate: {book.publishedDate}</p>
-      <p>Genre: {book.genre}</p>
-      <p>Description: {book.description}</p>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center bg-light">
+                <h2>{book.title}</h2>
+                <h5>by {book.author}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>ISBN:</strong> {book.isbn ?? '9780142437247'}</p>
+                <p class="card-text"><strong>Published Date:</strong> {book.publishedDate ?? '2024-08-01'} </p>
+                <p class="card-text"><strong>Genre:</strong> {book.genre ?? 'Story'}</p>
+                <div class="mt-4">
+                    <h5>Description:</h5>
+                    <p>{book.description}</p>
+                </div>
+            </div>
+        </div>
     </div>
   );
 };

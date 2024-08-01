@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import BookModal from './components/BookModal';
 import BookList from './components/BookList';
 import AddBook from './components/AddBook';
+import UpdateBook from './components/UpdateBook';
 // import LoginPage from './components/LoginPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/book" element={<BookList />} />
         <Route path="/book/:id" element={<BookModal />} />
         <Route path="/create/book" element={<AddBook />} />
+        <Route path="/update/book/:id" element={<UpdateBook />} />
         {/* <Route path="/login" element={<LoginPage />} /> */}
       </Routes>
     </Router>
