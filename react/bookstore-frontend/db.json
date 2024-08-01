@@ -43,16 +43,13 @@
   ],
   "books": [
     {
-      "id": "5",
-      "title": "To the Lighthouse",
-      "author": "Virginia Woolf",
-      "isbn": "9780156907392",
-      "publishedDate": "1927-05-05",
-      "genre": "Modernist",
-      "description": "A landmark novel of high modernism, centering on the Ramsay family.",
-      "price": 13.99,
-      "stock": 20,
-      "coverImage": "https://example.com/images/to-the-lighthouse.jpg"
+      "id": "90c6",
+      "title": "Creative Effect",
+      "author": "Divesh Dwivedi",
+      "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale.",
+      "price": "249",
+      "isbn": "2876",
+      "stock": "45"
     }
   ],
   "reviews": [

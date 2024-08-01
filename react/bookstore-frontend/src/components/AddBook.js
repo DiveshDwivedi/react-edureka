@@ -36,9 +36,6 @@ const AddBook = () => {
       <Toaster/>
       <div className="container">
         <div className="form-container">
-          <div className="form-header text-center">
-            <h2>Create Book</h2>
-          </div>
             <div className="form-group">
               <label htmlFor="title">Title</label>
               <input

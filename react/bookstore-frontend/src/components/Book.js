@@ -1,18 +1,49 @@
-// src/components/Book.js
-import { useEffect, useState } from "react"; 
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { fetchBookById } from "../services/api.js";
 
-const Book = ({ book }) => {
+const Book = () => {
+  const { id } = useParams();
+  const [book, setBook] = useState(null);
+
+  useEffect(() => {
+    const fetchBook = async (id) => {
+      try {
+        const fetchBook = await fetchBookById(id);
+        setBook(fetchBook);
+      } catch (error) {
+        console.log("Error Occured while fetching book details  ", error);
+      }
+    };
+    fetchBook(id);
+  }, [id]);
+
+  
+  if (!book) {
+    return <div>Loading...</div>;
+  }
+
+
   return (
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{book.title}</h5>
-          <p className="card-text">{book.description}</p>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header text-center bg-light">
+                <h2>{book.title}</h2>
+                <h5>by {book.author}</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>ISBN:</strong> {book.isbn ?? '9780142437247'}</p>
+                <p class="card-text"><strong>Published Date:</strong> {book.publishedDate ?? '2024-08-01'} </p>
+                <p class="card-text"><strong>Genre:</strong> {book.genre ?? 'Story'}</p>
+                <div class="mt-4">
+                    <h5>Description:</h5>
+                    <p>{book.description}</p>
+                </div>
+            </div>
         </div>
-        <Link to={`/book/${book.id}`} className="btn btn-primary">View</Link>
-      </div>
-
+    </div>
   );
 };
 

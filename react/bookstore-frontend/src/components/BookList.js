@@ -1,10 +1,10 @@
-import React from 'react';
-import Book from './Book';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from "react"; 
-import { deleteBookById, fetchBooks } from '../services/api.js';
-import toast, { Toaster } from 'react-hot-toast';
-
+import React from "react";
+import Book from "./Book";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { deleteBookById, fetchBooks } from "../services/api.js";
+import toast, { Toaster } from "react-hot-toast";
+import BookModal from "./BookModal.js";
 
 const BooksList = () => {
   const [books, setBooks] = useState([]);
@@ -14,38 +14,92 @@ const BooksList = () => {
         const fetchBooksList = await fetchBooks();
         setBooks(fetchBooksList);
       } catch (error) {
-        console.log('Error Occured while fetching book details  ', error);
+        console.log("Error Occured while fetching book details  ", error);
       }
-    }
+    };
     fetchBooksList();
-  }, [])
-
+  }, []);
 
   const deleteBook = async (book) => {
     try {
       await deleteBookById(book.id);
       setBooks((prevBooks) => prevBooks.filter((b) => b.id !== book.id));
-      toast.success('Your record is deleted');
+      toast.success("Your record is deleted");
     } catch (error) {
-      console.log('Error Occured while deleting book', error);
+      console.log("Error Occured while deleting book", error);
     }
-
-  }
-
+  };
 
   return (
     <div className="container">
       <Toaster />
       <div className="row">
-        {books.map((book) => (
-          <div className="col-lg-3 col-md-4 col-sm-6 mt-2">
-            <Book book={book} />
-            <div className='upd-btn'>
-            <Link className="btn btn-primary" to={`/update/book/${book.id}`}>Update</Link>
-              <button className="btn btn-danger" onClick={() => deleteBook(book)}>Delete</button>
+        <h1 className="h3 mt-3 mb-3">
+          <strong>Books</strong> Dashboard
+        </h1>
+
+        <div className="row">
+          <div className="col-12 col-lg-12 col-xxl-9 d-flex">
+            <div className="card flex-fill">
+              <div className="card-header">
+                <h5 className="card-title text-center mb-0">
+                  All Book Details
+                </h5>
+                <div className="float-right">
+                  <button
+                    className="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModalLong"
+                  >
+                    {" "}
+                    Create{" "}
+                  </button>
+                </div>
+              </div>
+
+              <table className="table table-hover my-0">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th className="d-none d-xl-table-cell">Author</th>
+                    <th className="d-none d-xl-table-cell">Price</th>
+                    <th className="d-none d-md-table-cell">Action</th>
+                  </tr>
+                </thead>
+                {books.map((book) => (
+                  <tbody>
+                    <tr>
+                      <td>{book.title}</td>
+                      <td className="d-none d-xl-table-cell">{book.author}</td>
+                      <td className="d-none d-xl-table-cell">{book.price}</td>
+
+                      <td className="d-none d-md-table-cell">
+                        <span>
+                          <Link
+                            to={`/book/${book.id}`}
+                            className="btn btn-primary"
+                          >
+                            View
+                          </Link>
+                        </span>
+                        <span className="m-1">
+                          <Link
+                            className="btn btn-primary"
+                            to={`/update/book/${book.id}`}
+                          >
+                            Update
+                          </Link>
+                        </span>
+                        <button className="btn btn-danger" onClick={() => deleteBook(book)}>Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
+              </table>
             </div>
           </div>
-        ))}
+        </div>
+        <BookModal />
       </div>
     </div>
   );
