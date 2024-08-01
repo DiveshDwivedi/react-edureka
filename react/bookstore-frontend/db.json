@@ -43,30 +43,6 @@
   ],
   "books": [
     {
-      "id": "3",
-      "title": "Pride and Prejudice",
-      "author": "Jane Austen",
-      "isbn": "9780141439518",
-      "publishedDate": "1813-01-28",
-      "genre": "Romance",
-      "description": "A classic tale of love and misunderstanding in class-conscious England.",
-      "price": 9.99,
-      "stock": 40,
-      "coverImage": "https://example.com/images/pride-and-prejudice.jpg"
-    },
-    {
-      "id": "4",
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "isbn": "9780743273565",
-      "publishedDate": "1925-04-10",
-      "genre": "Fiction",
-      "description": "A portrait of the Jazz Age in all of its decadence and excess.",
-      "price": 11.99,
-      "stock": 25,
-      "coverImage": "https://example.com/images/the-great-gatsby.jpg"
-    },
-    {
       "id": "5",
       "title": "To the Lighthouse",
       "author": "Virginia Woolf",

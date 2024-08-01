@@ -2,17 +2,23 @@
 import axios from 'axios';
 
 export const fetchBooks = async () => {
-  const response = await axios.get('http://localhost:3001/books');
+  const response = await axios.get('http://localhost:3002/books');
   return response.data;
 };
 
 export const fetchBookById = async (id) => {
-    const response = await axios.get(`http://localhost:3001/books/${id}`);
+    const response = await axios.get(`http://localhost:3002/books/${id}`);
     return response.data;
   };
 
   export const deleteBookById = async (id) => {
-    const response = await axios.delete(`http://localhost:3001/books/${id}`);
+     await axios.delete(`http://localhost:3002/books/${id}`);
+    // return fetchBooks();
+  };
+
+  export const createBook = async (data) => {
+    console.log('axios data : ', data);
+    const response = await axios.post(`http://localhost:3002/books`, data);
     return response.data;
   };
 
