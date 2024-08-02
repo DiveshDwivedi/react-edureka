@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchBookById, updateBook } from "../services/api.js";
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const UpdateBook = () => {
   const { id } = useParams();
   const [book, setBook] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBook = async (id) => {
@@ -34,6 +36,9 @@ const UpdateBook = () => {
     console.log("Book Updated:", book);
     updateBook(id, book);
     toast.success('Your record is updated');
+    setTimeout(() => {
+      navigate('/book');
+    }, 2000)
   }
 
   return (

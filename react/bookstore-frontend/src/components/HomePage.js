@@ -1,17 +1,15 @@
 import NavBar from "./NavBar.js";
-import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-    return (
-      <>
+  return (
+    <>
       <header>
         <nav>
-        <NavBar/>
-        {/* <Link to="create/book">Create Book</Link>         */}
-      </nav>
+          <NavBar />
+        </nav>
       </header>
-      </>
-    );
-  };
-  
-  export default HomePage;
+    </>
+  );
+};
+
+export default HomePage;

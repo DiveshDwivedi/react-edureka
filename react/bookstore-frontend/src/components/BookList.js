@@ -3,7 +3,6 @@ import Book from "./Book";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { deleteBookById, fetchBooks } from "../services/api.js";
-import toast, { Toaster } from "react-hot-toast";
 import BookModal from "./BookModal.js";
 
 const BooksList = () => {
@@ -23,8 +22,7 @@ const BooksList = () => {
   const deleteBook = async (book) => {
     try {
       await deleteBookById(book.id);
-      setBooks((prevBooks) => prevBooks.filter((b) => b.id !== book.id));
-      toast.success("Your record is deleted");
+        setBooks((prevBooks) => prevBooks.filter((b) => b.id !== book.id));
     } catch (error) {
       console.log("Error Occured while deleting book", error);
     }
@@ -32,12 +30,11 @@ const BooksList = () => {
 
   return (
     <div className="container">
-      <Toaster />
       <div className="row">
         <h1 className="h3 mt-3 mb-3">
           <strong>Books</strong> Dashboard
         </h1>
-
+  
         <div className="row">
           <div className="col-12 col-lg-12 col-xxl-9 d-flex">
             <div className="card flex-fill">
@@ -56,7 +53,7 @@ const BooksList = () => {
                   </button>
                 </div>
               </div>
-
+         
               <table className="table table-hover my-0">
                 <thead>
                   <tr>
