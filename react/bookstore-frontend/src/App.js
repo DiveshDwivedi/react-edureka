@@ -10,9 +10,11 @@ import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 import UpdateBook from "./components/UpdateBook";
 import LoginPage from "./components/Login/LoginPage";
+import Register from "./components/Register";
 
 function App() {
   return (
+    <>
     <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -23,6 +25,10 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
         </Routes>
     </Router>
+    <main className="App">
+      <Register />
+    </main>
+    </>
   );
 }
 
