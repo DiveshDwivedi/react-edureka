@@ -39,6 +39,38 @@
       "password": "hashed_password_5",
       "role": "user",
       "createdAt": "2023-05-12T11:55:00Z"
+    },
+    {
+      "id": "d95b",
+      "username": "Divesh",
+      "email": "dwivedidivesh21@gamil.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-11 7:52:40"
+    },
+    {
+      "id": "d64d",
+      "username": "Divesh",
+      "email": "dwivedidivesh21@gamil.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-11 7:57:41"
+    },
+    {
+      "id": "a02e",
+      "username": "Divesh Dwivedi",
+      "email": "dwivedidivesh21@gamil.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-11 7:57:45"
+    },
+    {
+      "id": "3843",
+      "username": "Divesh",
+      "email": "dwivedidivesh21@gamil.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-11 7:58:29"
     }
   ],
   "books": [

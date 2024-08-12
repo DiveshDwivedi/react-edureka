@@ -27,3 +27,9 @@ export const fetchBookById = async (id) => {
     const response = await axios.put(`http://localhost:3002/books/${id}`, data);
     return response.data;
   };
+
+  export const registerUser = async (data) => {
+    console.log('axios register user : ', data);
+    const response = await axios.post(`http://localhost:3002/users`, data);
+    return response.data;
+  };

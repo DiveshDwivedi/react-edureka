@@ -10,7 +10,7 @@ import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 import UpdateBook from "./components/UpdateBook";
 import LoginPage from "./components/Login/LoginPage";
-import Register from "./components/Register";
+import Register from "./components/Register/Register";
 
 function App() {
   return (
@@ -23,11 +23,9 @@ function App() {
           <Route path="/create/book" element={<AddBook />} />
           <Route path="/update/book/:id" element={<UpdateBook />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
     </Router>
-    <main className="App">
-      <Register />
-    </main>
     </>
   );
 }

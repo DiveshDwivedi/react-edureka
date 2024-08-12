@@ -27,17 +27,18 @@ const Book = () => {
 
 
   return (
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header text-center bg-light">
+    <div className="container mt-5">
+        <div className="card">
+            <div className="card-header text-center bg-light">
                 <h2>{book.title}</h2>
                 <h5>by {book.author}</h5>
             </div>
-            <div class="card-body">
-                <p class="card-text"><strong>ISBN:</strong> {book.isbn ?? '9780142437247'}</p>
-                <p class="card-text"><strong>Published Date:</strong> {book.publishedDate ?? '2024-08-01'} </p>
-                <p class="card-text"><strong>Genre:</strong> {book.genre ?? 'Story'}</p>
-                <div class="mt-4">
+            <div className="card-body">
+                <p className="card-text"><strong>ISBN:</strong> {book.isbn ?? '9780142437247'}</p>
+                <p className="card-text"><strong>Published Date:</strong> {book.publishedDate ?? '2024-08-01'} </p>
+                <p className="card-text"><strong>Genre:</strong> {book.genre ?? 'Story'}</p>
+                <p className="card-text"><strong>Price:</strong> {book.price}</p>
+                <div className="mt-4">
                     <h5>Description:</h5>
                     <p>{book.description}</p>
                 </div>

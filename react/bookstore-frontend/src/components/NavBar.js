@@ -17,6 +17,17 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
+
+      <div>
+      <ul className="navbar-nav">
+          <li className="nav-item">
+            <a className="nav-link" href="/register">SignUp</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/login">LogIn</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

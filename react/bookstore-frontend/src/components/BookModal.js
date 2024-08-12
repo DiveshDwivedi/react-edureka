@@ -7,7 +7,7 @@ const BookModal = () => {
     <div
     className="modal fade"
     id="exampleModalLong"
-    tabindex="-1"
+    tabIndex="-1"
     role="dialog"
     aria-labelledby="exampleModalLongTitle"
     aria-hidden="true"

@@ -1,5 +1,4 @@
 import React from "react";
-import Book from "./Book";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { deleteBookById, fetchBooks } from "../services/api.js";
@@ -64,7 +63,7 @@ const BooksList = () => {
                   </tr>
                 </thead>
                 {books.map((book) => (
-                  <tbody>
+                  <tbody key={book.id}>
                     <tr>
                       <td>{book.title}</td>
                       <td className="d-none d-xl-table-cell">{book.author}</td>
