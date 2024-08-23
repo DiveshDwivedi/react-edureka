@@ -1,6 +1,8 @@
 import React from 'react';
 
 const NavBar = () => {
+  let session = sessionStorage.getItem('username');
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">BookStore</a>
@@ -24,7 +26,9 @@ const NavBar = () => {
             <a className="nav-link" href="/register">SignUp</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/login">LogIn</a>
+            {
+              session ? <a className="nav-link" href="/login">Logout</a> : <a className="nav-link" href="/login">LogIn</a>
+            }
           </li>
         </ul>
       </div>

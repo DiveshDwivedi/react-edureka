@@ -33,3 +33,9 @@ export const fetchBookById = async (id) => {
     const response = await axios.post(`http://localhost:3002/users`, data);
     return response.data;
   };
+
+  export const username = async (username) => {
+    console.log('axios fetch user : ', username);
+    const response = await axios.get(`http://localhost:3002/users?username=${username}`);
+    return response.data;
+  };

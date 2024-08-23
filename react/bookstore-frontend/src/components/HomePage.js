@@ -1,10 +1,18 @@
 import NavBar from "./NavBar.js";
 import { useEffect, useState } from "react";
 import { fetchBooks } from "../services/api.js";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [books, setBooks] = useState([]);
+  const usenavigate = useNavigate();
   useEffect(() => {
+    let username = sessionStorage.getItem("username");
+
+    if (username === "" || username === null) {
+      usenavigate("/login");
+    }
+
     const fetchBooksList = async () => {
       try {
         const fetchBooksList = await fetchBooks();
@@ -24,18 +32,18 @@ const HomePage = () => {
       <div className="container mt-2">
         <div className="row">
           {books.map((book) => (
-            <div className="col-3 mb-1">
+            <div className="col-3 mb-1" key={book.id}>
               <div className="card">
                 <img
                   src="https://m.media-amazon.com/images/I/41aL70yoloL._SX342_SY445_.jpg"
-                  classNameName="card-img-top"
+                  className="card-img-top"
                   alt="..."
                 />
                 <div className="card-body">
                   <h5 className="card-title">{book.title}</h5>
                   <p className="card-text">{book.author}</p>
                   <p className="card-text">
-                  ₹ {book.price}
+                    ₹ {book.price}
                     {/* <small className="text-muted">Last updated 3 mins ago</small> */}
                   </p>
                 </div>
