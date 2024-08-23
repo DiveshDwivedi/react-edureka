@@ -6,15 +6,13 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { AuthProvider } from "./context/AuthProvider";
+import Footer from "./components/layouts/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </AuthProvider>
 );
 
 reportWebVitals();

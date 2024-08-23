@@ -1,9 +1,9 @@
-// components/Header.js
+import NavBar from "./NavBar";
 
 const Header = () => {
     return (
       <header>
-        <h1>Online Bookstore</h1>
+        <NavBar />
       </header>
     );
   };

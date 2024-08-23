@@ -11,6 +11,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "../layouts/Footer.js";
 
 const Register = () => {
   const userRef = useRef();
@@ -276,6 +277,7 @@ const Register = () => {
           </section>
         </div>
       )}
+      <Footer/>
     </>
   );
 };

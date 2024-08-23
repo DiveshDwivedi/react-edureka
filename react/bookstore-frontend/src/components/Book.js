@@ -3,6 +3,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchBookById } from "../services/api.js";
+import Footer from "./layouts/Footer.js";
+import Header from "./layouts/Header.js";
 
 const Book = () => {
   const { id } = useParams();
@@ -24,9 +26,9 @@ const Book = () => {
   if (!book) {
     return <div>Loading...</div>;
   }
-
-
   return (
+    <>
+    <Header/>
     <div className="container mt-5">
         <div className="card">
             <div className="card-header text-center bg-light">
@@ -45,6 +47,8 @@ const Book = () => {
             </div>
         </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
