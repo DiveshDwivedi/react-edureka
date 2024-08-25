@@ -2,9 +2,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { fetchBookById } from "../services/api.js";
-import Footer from "./layouts/Footer.js";
-import Header from "./layouts/Header.js";
+import { fetchBookById } from "../../services/api.js";
+import Footer from "../layouts/Footer.js";
+import Header from "../layouts/Header.js";
 
 const Book = () => {
   const { id } = useParams();

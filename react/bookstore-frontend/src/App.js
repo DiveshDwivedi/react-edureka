@@ -5,10 +5,10 @@ import {
   Routes,
 } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import Book from "./components/Book";
-import BookList from "./components/BookList";
-import AddBook from "./components/AddBook";
-import UpdateBook from "./components/UpdateBook";
+import Book from "./components/Books/Book";
+import BookList from "./components/Books/BookList";
+import AddBook from "./components/Books/AddBook";
+import UpdateBook from "./components/Books/UpdateBook";
 import LoginPage from "./components/Login/LoginPage";
 import Register from "./components/Register/Register";
 

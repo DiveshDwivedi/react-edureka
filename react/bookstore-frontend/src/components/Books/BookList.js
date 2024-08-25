@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { deleteBookById, fetchBooks } from "../services/api.js";
+import { deleteBookById, fetchBooks } from "../../services/api.js";
 import BookModal from "./BookModal.js";
-import Header from "./layouts/Header.js";
-import Footer from "./layouts/Footer.js";
+import Header from "../layouts/Header.js";
+import Footer from "../layouts/Footer.js";
 
 const BooksList = () => {
   const [books, setBooks] = useState([]);

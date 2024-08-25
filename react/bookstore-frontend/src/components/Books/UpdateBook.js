@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchBookById, updateBook } from "../services/api.js";
+import { fetchBookById, updateBook } from "../../services/api.js";
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import Header from "./layouts/Header.js";
-import Footer from "./layouts/Footer.js";
+import Header from "../layouts/Header.js";
+import Footer from "../layouts/Footer.js";
 
 const UpdateBook = () => {
   const { id } = useParams();
