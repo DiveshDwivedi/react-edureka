@@ -43,6 +43,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ### `react-hot-toast`
 ### `bootstrap`
 ### `npm i joi`
+### `npm i react-shimmer-effects`
 
 ### `used VS code extension Live Sass Compiler to compile scss to css on real time`
 

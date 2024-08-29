@@ -1,8 +1,8 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Search from '../Books/Search';
 const NavBar = () => {
   let session = sessionStorage.getItem('username');
-  
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <a className="navbar-brand" href="/">BookStore</a>
@@ -14,10 +14,11 @@ const NavBar = () => {
           <li className="nav-item">
             <a className="nav-link" href="/book">Books</a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link" href="#">Profile</a>
-          </li>
+          </li> */}
         </ul>
+        <Search />
       </div>
 
       <div>

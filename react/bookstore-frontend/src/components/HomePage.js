@@ -6,8 +6,8 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <Body/>
-      <Footer/>
+      <Body />
+      <Footer />
     </>
   );
 };

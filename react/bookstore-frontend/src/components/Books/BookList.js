@@ -39,25 +39,23 @@ const BooksList = () => {
               <strong>Books</strong> Dashboard
             </h1>
             <div className="row">
-              <div className="col-12 col-lg-12 col-xxl-9 d-flex">
+              <div className="col-12 col-lg-12 col-xxl d-flex">
                 <div className="card flex-fill">
                   <div className="card-header">
-                    <h5 className="card-title text-center mb-0">
-                      All Book Details
-                    </h5>
-                    <div className="float-right">
-                      <button
-                        className="btn btn-primary"
-                        data-toggle="modal"
-                        data-target="#exampleModalLong"
-                      >
-                        {" "}
-                        Create{" "}
-                      </button>
-                    </div>
+                    <button
+                      className="btn btn-primary pull-right"
+                      data-toggle="modal"
+                      data-target="#exampleModalLong"
+                    >
+                      {" "}
+                      Create{" "}
+                    </button>
                   </div>
 
-                  <table className="table table-hover my-0" style={{"height":"300px"}}>
+                  <table
+                    className="table table-hover my-0"
+                    style={{ height: "300px" }}
+                  >
                     <thead>
                       <tr>
                         <th>Title</th>
@@ -112,7 +110,7 @@ const BooksList = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -1,6 +1,8 @@
 import NavBar from "./NavBar";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props, 'divesh pro');
+  
     return (
       <header>
         <NavBar />

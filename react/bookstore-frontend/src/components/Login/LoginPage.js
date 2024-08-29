@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { username } from "../../services/api";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import Footer from "../layouts/Footer";
 
 const Login = () => {
   const userRef = useRef();
@@ -53,6 +54,7 @@ const Login = () => {
   };
 
   return (
+    <>
     <div className="card my_login_card">
       <Toaster />
       <div className="card-body">
@@ -87,7 +89,9 @@ const Login = () => {
           </button>
         </form>
       </div>
+    <Footer />
     </div>
+    </>
   );
 };
 export default Login;
