@@ -29,7 +29,7 @@ const Book = () => {
   return (
     <>
     <Header/>
-    <div className="container mt-5">
+    <div className="container mt-3">
         <div className="card">
             <div className="card-header text-center bg-light">
                 <h2>{book.title}</h2>

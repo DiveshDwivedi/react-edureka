@@ -2,9 +2,10 @@
   width: 500px;
   position: absolute;
   left: 400px;
-  top: 150px;
+  top: 50px;
   .card-body {
-    background-color: black;
+    border-radius: 8px;
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
     color: white;
   }
 }

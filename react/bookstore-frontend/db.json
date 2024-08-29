@@ -38,7 +38,7 @@
       "email": "charlie@example.com",
       "password": "hashed_password_5",
       "role": "user",
-      "createdAt": "2023-05-12T11:55:00Z"
+      "createdAt": "2023-05-12T11:55:00Z" 
     },
     {
       "id": "d95b",
@@ -55,6 +55,44 @@
       "password": "Test@122334",
       "role": "user",
       "createdAt": "2024-8-11 7:57:45"
+    },
+    {
+      "id": "bc48",
+      "username": "Divesh",
+      "email": "23435",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-29 16:30:22"
+    },
+    {
+      "id": "f943",
+      "username": "Athon",
+      "email": "Atho@gmail.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-29 16:53:1"
+    },
+    {
+      "id": "705c",
+      "username": "Divesh",
+      "email": "divesh.d@gmail.com",
+      "password": "Test@122334",
+      "role": "user",
+      "createdAt": "2024-8-29 17:0:45"
+    },
+    {
+      "id": "873c",
+      "username": "Divesh",
+      "email": "divs@gmail.com",
+      "password": "Test@122334",
+      "role": "user"
+    },
+    {
+      "id": "0544",
+      "username": "Divesh",
+      "email": "divs@gmail.com",
+      "password": "Test@122334",
+      "role": "user"
     }
   ],
   "books": [

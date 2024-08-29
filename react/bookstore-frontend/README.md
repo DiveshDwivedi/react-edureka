@@ -48,3 +48,9 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ### `used VS code extension Live Sass Compiler to compile scss to css on real time`
 
 after doing changes need to import style.css to index.js so changes will reflect.
+
+
+
+### colors 
+
+`background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))`

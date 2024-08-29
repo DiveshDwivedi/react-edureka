@@ -2,9 +2,19 @@
   width: 500px;
   position: absolute;
   left: 400px;
-  top: 150px;
+  top: 50px;
 }
 .my_login_card .card-body {
-  background-color: black;
+  border-radius: 8px;
+  background: linear-gradient(to right, rgb(106, 17, 203), rgb(37, 117, 252));
   color: white;
 }/*# sourceMappingURL=style.css.map */
+
+.search-box{
+  display: flex;
+  width: 500px;
+  margin-bottom: 14px;
+}
+.form-group {
+  margin-bottom: 0px;
+}

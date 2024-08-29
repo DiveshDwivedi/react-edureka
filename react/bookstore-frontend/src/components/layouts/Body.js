@@ -3,7 +3,7 @@ import { fetchBooks } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { ShimmerPostList } from "react-shimmer-effects";
-import Search from "../Books/Search.js";
+import SearchText from "../Books/Search.js";
 const Body = () => {
   const [books, setBooks] = useState([]);
   const usenavigate = useNavigate();
@@ -32,6 +32,8 @@ const Body = () => {
         <ShimmerPostList postStyle="STYLE_FOUR" col={3} row={2} gap={30} />
       ) : (
         <div className="container mt-2">
+          <SearchText books={books} setBooks={setBooks} />
+
           <div className="row">
             {books.map((book) => (
               <div className="col-3 mb-1" key={book.id}>
@@ -39,7 +41,6 @@ const Body = () => {
                   <img
                     src="https://m.media-amazon.com/images/I/41aL70yoloL._SX342_SY445_.jpg"
                     className="card-img-top"
-                    alt="..."
                   />
                   <div className="card-body">
                     <h5 className="card-title">{book.title}</h5>

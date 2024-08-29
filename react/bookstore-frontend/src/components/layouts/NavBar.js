@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Search from '../Books/Search';
+import React from 'react';
+import SearchText from '../Books/Search';
 const NavBar = () => {
   let session = sessionStorage.getItem('username');
 
@@ -18,7 +18,7 @@ const NavBar = () => {
             <a className="nav-link" href="#">Profile</a>
           </li> */}
         </ul>
-        <Search />
+        {/* <SearchText /> */}
       </div>
 
       <div>

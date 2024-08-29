@@ -3,7 +3,6 @@ import { useState } from "react";
 import { createBook } from "../../services/api.js";
 import toast, { Toaster } from 'react-hot-toast';
 
-
 const AddBook = () => {
   const book_details = {
     title: '',
