@@ -1,14 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchBooks } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { ShimmerPostList } from "react-shimmer-effects";
 import SearchText from "../books/Search.js";
-import { ShopContext } from "../../context/ShopContext.js";
+import Index from "./Index.js";
 
 const Body = () => {
   const [books, setBooks] = useState([]);
-  const { addToCart, cartItems } = useContext(ShopContext);
 
   const usenavigate = useNavigate();
 
@@ -22,7 +21,6 @@ const Body = () => {
     const fetchBooksList = async () => {
       try {
         const fetchBooksList = await fetchBooks();
-        console.log(fetchBooksList, 'list');
         setBooks(fetchBooksList);
       } catch (error) {
         console.log("Error Occured while fetching book details  ", error);
@@ -38,33 +36,9 @@ const Body = () => {
       ) : (
         <div className="container mt-2">
           <SearchText books={books} setBooks={setBooks} />
-
           <div className="row">
             {books.map((book) => (
-              <div className="col-3 mb-1" key={book.id}>
-                <div className="card">
-                  <img
-                    src="https://m.media-amazon.com/images/I/41aL70yoloL._SX342_SY445_.jpg"
-                    className="card-img-top"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{book.title}</h5>
-                    <p className="card-text">{book.author}</p>
-                    <p className="card-text">
-                      ₹ {book.price}
-                      {/* <small className="text-muted">Last updated 3 mins ago</small> */}
-                    </p>
-
-                    <button className="btn btn-sm btn-primary"
-                    onClick={() => {
-                      addToCart(book.id);
-                    }}
-                    >
-                      Add to cart {}
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <Index key={book.id} books={book} />
             ))}
           </div>
         </div>

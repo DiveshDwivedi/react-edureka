@@ -3,12 +3,11 @@ import { fetchBooks } from "../services/api";
 
 export const ShopContext = createContext(null);
 
-
-const data = await fetchBooks();
+const books = await fetchBooks();
 
 const getDefaultCart = () => {
   let cart = {};
-  for (let i = 1; i < data.length + 1; i++) {
+  for (let i = 1; i < books.length + 1; i++) {
     cart[i] = 0;
   }
 
