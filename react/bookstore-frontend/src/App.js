@@ -12,15 +12,15 @@ import UpdateBook from "./components/books/UpdateBook";
 import LoginPage from "./components/login/LoginPage";
 import Register from "./components/register/Register";
 import Signup from "./components/register/Signup";
-import Error from './components/auth/Error';
 import Cart from "./components/cart/Cart";
+import { ShopContextProvider } from "./context/ShopContext";
 
 function App() {
   return (
-    <>
+    <ShopContextProvider>
     <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} errorElement={<Error />}/>
+          <Route path="/" element={<HomePage />}/>
           <Route path="/book" element={<BookList />} />
           <Route path="/book/:id" element={<Book />} />
           <Route path="/create/book" element={<AddBook />} />
@@ -31,7 +31,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Routes>
     </Router>
-    </>
+    </ShopContextProvider>
   );
 }
 

@@ -97,7 +97,7 @@
   ],
   "books": [
     {
-      "id": "90c6",
+      "id": "1",
       "title": "Creative Effect",
       "author": "Divesh Dwivedi",
       "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale.",
@@ -106,7 +106,7 @@
       "stock": "45"
     },
     {
-      "id": "71c2",
+      "id": "2",
       "title": "Story of Success Divesh",
       "author": "Divesh Dwivedi",
       "description": "Be with yourself",
@@ -115,7 +115,7 @@
       "stock": "34"
     },
     {
-      "id": "b12b",
+      "id": "3",
       "title": "acrge ",
       "author": "ddfdb",
       "description": "gt",
@@ -124,7 +124,7 @@
       "stock": "21"
     },
     {
-      "id": "99cd",
+      "id": "4",
       "title": "Ege of the fire",
       "author": "Herman Melville",
       "description": "Live life burn",
@@ -133,7 +133,7 @@
       "stock": "44"
     },
     {
-      "id": "90c6",
+      "id": "5",
       "title": "Creative Effect",
       "author": "Divesh Dwivedi",
       "description": "The saga of Captain Ahab and his monomaniacal pursuit of the white whale.",
@@ -142,7 +142,7 @@
       "stock": "45"
     },
     {
-      "id": "71c2",
+      "id": "6",
       "title": "Story of Success Divesh",
       "author": "Divesh Dwivedi",
       "description": "Be with yourself",
@@ -151,7 +151,7 @@
       "stock": "34"
     },
     {
-      "id": "b12b",
+      "id": "7",
       "title": "acrge ",
       "author": "ddfdb",
       "description": "gt",
@@ -160,7 +160,7 @@
       "stock": "21"
     },
     {
-      "id": "99cd",
+      "id": "8",
       "title": "Ege of the fire",
       "author": "Herman Melville",
       "description": "Live life burn",

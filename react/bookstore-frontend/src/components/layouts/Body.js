@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { fetchBooks } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { ShimmerPostList } from "react-shimmer-effects";
 import SearchText from "../books/Search.js";
+import { ShopContext } from "../../context/ShopContext.js";
+
 const Body = () => {
   const [books, setBooks] = useState([]);
+  const { addToCart, cartItems } = useContext(ShopContext);
+
   const usenavigate = useNavigate();
 
   useEffect(() => {
@@ -18,6 +22,7 @@ const Body = () => {
     const fetchBooksList = async () => {
       try {
         const fetchBooksList = await fetchBooks();
+        console.log(fetchBooksList, 'list');
         setBooks(fetchBooksList);
       } catch (error) {
         console.log("Error Occured while fetching book details  ", error);
@@ -50,7 +55,13 @@ const Body = () => {
                       {/* <small className="text-muted">Last updated 3 mins ago</small> */}
                     </p>
 
-                    <button className="btn btn-sm btn-primary">Add to cart</button>
+                    <button className="btn btn-sm btn-primary"
+                    onClick={() => {
+                      addToCart(book.id);
+                    }}
+                    >
+                      Add to cart {}
+                    </button>
                   </div>
                 </div>
               </div>
