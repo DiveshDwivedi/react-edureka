@@ -1,35 +1,48 @@
-import React from 'react';
-import SearchText from '../Books/Search';
+import React from "react";
+import { Link } from "react-router-dom";
 const NavBar = () => {
-  let session = sessionStorage.getItem('username');
+  let session = sessionStorage.getItem("username");
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/">BookStore</a>
+      <Link className="navbar-brand" to="/">
+        BookStore
+      </Link>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="/">Home</a>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/book">Books</a>
+            <Link className="nav-link" to="/book">
+              Books
+            </Link>
           </li>
           {/* <li className="nav-item">
-            <a className="nav-link" href="#">Profile</a>
+            <Link className="nav-link" to="#">Profile</Link>
           </li> */}
         </ul>
         {/* <SearchText /> */}
       </div>
 
       <div>
-      <ul className="navbar-nav">
+        <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="/register">SignUp</a>
+            <Link className="nav-link" to="/cart">
+              Cart
+            </Link>
           </li>
           <li className="nav-item">
-            {
-              session ? <a className="nav-link" href="/login">Logout</a> : <a className="nav-link" href="/login">LogIn</a>
-            }
+            <Link className="nav-link" to="/register">
+              SignUp
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              {session ? "Logout" : "Login"}{" "}
+            </Link>
           </li>
         </ul>
       </div>
@@ -38,4 +51,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

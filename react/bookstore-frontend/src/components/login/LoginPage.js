@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { username } from "../../services/api";
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate, Link } from "react-router-dom";
-import Footer from "../layouts/Footer";
 
 const Login = () => {
   const userRef = useRef();

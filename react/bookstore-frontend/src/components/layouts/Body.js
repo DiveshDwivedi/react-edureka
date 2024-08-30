@@ -3,7 +3,7 @@ import { fetchBooks } from "../../services/api.js";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import { ShimmerPostList } from "react-shimmer-effects";
-import SearchText from "../Books/Search.js";
+import SearchText from "../books/Search.js";
 const Body = () => {
   const [books, setBooks] = useState([]);
   const usenavigate = useNavigate();
@@ -49,6 +49,8 @@ const Body = () => {
                       ₹ {book.price}
                       {/* <small className="text-muted">Last updated 3 mins ago</small> */}
                     </p>
+
+                    <button className="btn btn-sm btn-primary">Add to cart</button>
                   </div>
                 </div>
               </div>

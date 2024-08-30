@@ -1,6 +1,6 @@
-import Footer from "./layouts/Footer.js";
-import Header from "./layouts/Header.js";
-import Body from "./layouts/Body.js";
+import Footer from "./Footer.js";
+import Header from "./Header.js";
+import Body from "./Body.js";
 
 const HomePage = () => {
   return (

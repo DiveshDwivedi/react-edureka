@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { registerUser } from "../../services/api.js";
-import now from "../../services/helpers/DateTime.js";
+import now from "../../utils/Helpers/DateTime.js";
 import {
   USER_NAME_REGEX,
   PASSWORD_REGEX,
   EMAIL_REGEX,
-} from "../../services/helpers/Regex.js";
+} from "../../utils/Helpers/Regex.js";
 import toast, { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import {

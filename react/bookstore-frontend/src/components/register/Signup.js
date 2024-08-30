@@ -64,8 +64,8 @@ const Signup = () => {
                   <div className="form-group mt-3">
                     <input
                       type="text"
-                      minlength="10"
-                      maxlength="10"
+                      minLength="10"
+                      maxLength="10"
                       name="txtEmpPhone"
                       className="form-control"
                       placeholder="Your Phone *"
