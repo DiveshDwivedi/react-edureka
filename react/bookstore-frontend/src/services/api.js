@@ -34,3 +34,8 @@ export const fetchBookById = async (id) => {
     const response = await axios.get(`http://localhost:3002/users?username=${username}`);
     return response.data;
   };
+
+  export const addCart = async (data) => {
+    const response = await axios.post(`http://localhost:3002/cart`, data);
+    return response.data;
+  };

@@ -17,6 +17,7 @@ after doing changes need to import style.css to index.js so changes will reflect
 ### Todo
 - Cart 
 - User Based Route Access Permission
+- Android Compatability Check 
 - reviews
 - orders
 - wishlist
