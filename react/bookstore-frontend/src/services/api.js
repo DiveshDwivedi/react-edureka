@@ -35,6 +35,11 @@ export const fetchBookById = async (id) => {
     return response.data;
   };
 
+  export const getCartItems = async () => {
+    const response = await axios.get(`http://localhost:3002/cart`);
+    return response.data;
+  };
+
   export const addCart = async (data) => {
     const response = await axios.post(`http://localhost:3002/cart`, data);
     return response.data;
